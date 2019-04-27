@@ -1,5 +1,6 @@
 import React from 'react';
 import './Header.css';
+import logo from '../Images/logo.png'
 
 class Header extends React.Component {
     render(){
@@ -13,12 +14,19 @@ class Header extends React.Component {
                                     <img 
                                     alt=''
                                     className="logo-image"
-                                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQldYYzl9Z4y5Q1vDezF1y4ARQdzbvTC5zb0Jgg-WPJ9ijsDugx"/>
+                                    src={logo}/>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </nav>
+                <div className="menu-content">
+                    <ul className="menu-navigation">
+                        <li>
+                            <a className="btn-primary" href=""> Solicitad tu credito </a>
+                        </li>
+                    </ul>
+                </div>
             </header>
         );
     }
