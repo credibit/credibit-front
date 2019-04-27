@@ -1,0 +1,16 @@
+.contain-form {
+    background-image:
+    linear-gradient(to bottom, rgba(245, 246, 252, 0.52), #8972da),
+    url('https://media0.giphy.com/media/xUA7aTWG5ddFWCSnPq/source.gif');
+    background-repeat:no-repeat;
+    height: -webkit-fill-available;
+}
+
+.popup-form {
+    position: fixed;
+    background-color: white;
+    padding: 3rem;
+    border-radius: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+}

@@ -1,10 +1,16 @@
 import React from 'react';
-import '../base.css';
+import '../Form/Form.css';
 
 class Form extends React.Component {
     render() {
         return(
-            <div className="contain">Hi</div>
+            <div className="contain-form">
+                <div className="popup-form">
+                    <div className="title">
+                        Solicitar Credito
+                    </div>
+                </div>
+            </div>
         )
     }
 }

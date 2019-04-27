@@ -27,10 +27,10 @@ class Header extends React.Component {
                 <div className="menu-content">
                     <ul className="menu-navigation">
                         <li>
-                            <Link to='/Form' className="btn-secondary">Iniciar Sesión</Link>
+                            <Link to='/form' className="btn-secondary">Iniciar Sesión</Link>
                         </li>
                         <li>
-                            <Link to='/Form' className="btn-primary"> Solicitad tu credito </Link>
+                            <Link to='/form' className="btn-primary"> Solicitad tu credito </Link>
                         </li>
                     </ul>
                 </div>
