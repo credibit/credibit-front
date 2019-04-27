@@ -10,7 +10,6 @@
 }
 
 .menu-navigation {
-    color: white;
     list-style-type: none;
     display: flex;
     padding-right: 2rem;
@@ -38,4 +37,8 @@ li {
     border-radius: 25px;
     color: white;
     text-decoration: none;
+}
+
+.btn-secondary {
+    color: white;
 }

@@ -1,10 +1,14 @@
 import React from 'react';
 import './Header.css';
-import logo from '../Images/logo.png'
+import logo from '../Images/logo.png';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import Form from '../Form/Form.js'
+
 
 class Header extends React.Component {
     render(){
         return (
+            <Router>
             <header className="header-style">
                 <nav className = "navbar navbar-default">
                     <div className="container">
@@ -23,11 +27,18 @@ class Header extends React.Component {
                 <div className="menu-content">
                     <ul className="menu-navigation">
                         <li>
-                            <a className="btn-primary" href=""> Solicitad tu credito </a>
+                            <Link to='/Form' className="btn-secondary">Iniciar Sesión</Link>
+                        </li>
+                        <li>
+                            <Link to='/Form' className="btn-primary"> Solicitad tu credito </Link>
                         </li>
                     </ul>
                 </div>
-            </header>
+                </header>
+
+                <Route path="/form" component={Form} />
+
+            </Router>
         );
     }
 }
