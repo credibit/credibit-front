@@ -23,7 +23,6 @@ class AdminPage extends React.Component{
             {
                 this.state.data === null ? <div></div> :
                 this.state.data.creditRequests.map(function(item, i){
-                    console.log('test');
                     return (
                         <AdminCards
                             name= {item.nombreEmpresa}

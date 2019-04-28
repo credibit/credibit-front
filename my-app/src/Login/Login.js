@@ -35,6 +35,7 @@ class Login extends Component {
   }
 
   onLogIn() {
+    this.props.hideCredit();
     this.props.history.push('/admin');
   }
 
