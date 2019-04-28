@@ -4,6 +4,7 @@ import logo from '../Images/logo.png';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import Form from '../Form/Form.js';
 import Login from  '../Login/Login.js';
+import Result from '../Result/Result.js';
 
 class Header extends React.Component {
     render(){
@@ -38,6 +39,7 @@ class Header extends React.Component {
 
                 <Route path="/form" component={Form} />
                 <Route path="/login" component={Login} />
+                <Route path="/result" component={Result}/>
 
             </Router>
         );
