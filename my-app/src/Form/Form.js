@@ -33,9 +33,9 @@ class Form extends React.Component {
 
     handleCreditClick = () => {
         this.setState({
-          personal: false,
-          enterprise: false,
-          credit: true
+            personal: false,
+            enterprise: false,
+            credit: true
         })
     }
 

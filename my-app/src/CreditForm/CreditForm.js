@@ -7,12 +7,12 @@ class CreditForm extends React.Component{
                 <form className = "credit-form">
                     <div>
                         <i class="fas fa-money-bill-wave"></i>
-                        <input type="text" placeholder="Monto Deseado">
+                        <input type="number" min="0.00" max="100000000000" step="1000" placeholder="Monto Deseado">
                         </input>
                     </div>
                     <div>
                         <i class="fas fa-calendar-alt"></i>
-                        <input type="text" placeholder="Plazo Deseado">
+                        <input type="date" placeholder="Plazo Deseado">
                         </input>
                     </div>
                 </form>
