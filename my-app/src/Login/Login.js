@@ -8,13 +8,15 @@ export default class Login extends Component {
     super(props);
 
     this.state = {
-      email: "",
-      password: ""
+      username: "",
+      password: "",
+      data: null,
     };
+    this.onLogIn = this.onLogIn.bind(this);
   }
 
   validateForm() {
-    return this.state.email.length > 0 && this.state.password.length > 0;
+    return this.state.username.length > 0 && this.state.password.length > 0;
   }
 
   handleChange = event => {
@@ -25,6 +27,20 @@ export default class Login extends Component {
 
   handleSubmit = event => {
     event.preventDefault();
+  }
+
+  onLogIn() {
+    fetch(`${process.env.REACT_APP_API_URL}/login`, {
+        method: 'post',
+        headers: {'Content-Type':'application/json'},
+        body: {
+        "username": this.state.username,
+        "password": this.state.password
+        }
+      })
+        .then(response => response.json())
+        .then(data => {this.setState({ data }); console.log(data)});
+
   }
 
     render() {
@@ -39,7 +55,7 @@ export default class Login extends Component {
             <FormControl
               autoFocus
               type="email"
-              value={this.state.email}
+              value={this.state.username}
               onChange={this.handleChange} placeholder="Mail" 
             
             />
@@ -60,6 +76,7 @@ export default class Login extends Component {
             disabled={!this.validateForm()}
             type="submit"
             className="btn-primary-mine"
+            onClick = {this.onLogIn}
           >
             Login
           </Button>

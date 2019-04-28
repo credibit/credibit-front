@@ -11,25 +11,35 @@ class AdminPage extends React.Component{
     }
 
     componentWillMount(){
-        fetch(`${process.env.REACT_APP_API_URL}`)
+
+        fetch(`${process.env.REACT_APP_API_URL}/creditRequests`)
         .then(response => response.json())
-        .then(data => {this.setState({ data }); console.log(data.companies)});
+        .then(data => {this.setState({ data }); console.log(data)});
     }
     render(){
+        console.log(this.state.data);
         return (
         <div className="admin-container">
             {
                 this.state.data === null ? <div></div> :
-                this.state.data.companies.map(function(item, i){
+                this.state.data.creditRequests.map(function(item, i){
                     console.log('test');
                     return (
                         <AdminCards
-                            name= {item.name}
-                            domain = {item.website}
-                            employees = {item.employees}
-                            twitter = {item.twitter}
+                            name= {item.nombreEmpresa}
+                            domain = {item.companySite}
+                            approved = {item.approved}
+                            correo = {item.correo}
+                            plazoDeseado = {item.plazoDeseado}
+                            puntosSat = {item.puntosSat}
+                            puntosBuro = {item.puntosBuro}
+                            toPay = {item.toPay}
+                            ingresoMensual = {item.ingresoMensual}
+                            ingresoNeto = {item.ingresoNeto}
+                            cantidadDeseada = {item.cantidadDeseada}
                             linkedin = {item.linkedin}
                             facebook = {item.facebook}
+                            twitter = {item.twitter}
                             />
                         )
                   })
