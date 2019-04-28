@@ -16,7 +16,6 @@ class AcceptanceCard extends React.Component {
                             "rgba(138, 121, 247, 0.2)"
                         ],
                         borderColor: ["rgba(138, 121, 247, 1)"],
-                        pointBackgroundColor: ["rgba(138, 121, 247, 1)"],
                     }
                 ]
             }
