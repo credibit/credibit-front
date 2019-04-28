@@ -42,8 +42,7 @@ class CreditForm extends React.Component{
                 .then(data => this.setState(data));
         }
         console.log(this.state.data);
-        this.props.history.push({pathname: '/result',
-        state: { data: this.state.data }})
+        this.props.history.push({pathname: '/result'})
     }
     render() {
         return(
