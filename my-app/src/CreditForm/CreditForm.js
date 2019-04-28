@@ -1,5 +1,9 @@
 import React from 'react';
 
+const btnStyle = {
+    marginTop: '3rem'
+}
+
 class CreditForm extends React.Component{
     constructor(props) {
         super(props);
@@ -51,7 +55,7 @@ class CreditForm extends React.Component{
                         <input type="number" min="3" max="400" step="1" placeholder="Plazo deseado" onChange={(e) => this.props.setInputValue(e, 'plazoDeseado')}></input>
                     </div>
                 </form>
-                <button className="btn-primary-mine" onClick={() => this.submitAll()}>Submit</button>
+                <button style={btnStyle} className="btn-primary-mine" onClick={() => this.submitAll()}>Submit</button>
             </div>
         )
     }
