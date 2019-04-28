@@ -5,12 +5,7 @@ class EnterpriseForm extends React.Component{
         super(props);
         this.state = {};
     }
-
-    eval (e) {
-        var sliderValue = document.getElementById('rating').value;
-        document.getElementById('sliderVal').innerHTML = sliderValue;
-        this.props.setInputValue(e, 'puntosSat')
-    }
+    
     render() {
         
         return(
@@ -49,11 +44,9 @@ class EnterpriseForm extends React.Component{
                     
                     <div>
                         <i className="fas fa-building none-border"></i>
-                        <input type="range" className="custom-range" id="rating" onChange={(e) => this.eval(e)} step="1" min="0" max="100"/>
-                        <div className="border-separator"/>
-                        <output id="sliderVal"></output>
-                        
-                        </div>
+                        <input type="number" step="1" min="0" max="100" placeholder="Puntos SAT" onChange={(e) => this.props.setInputValue(e, 'puntosSat')}>
+                        </input>
+                    </div>
                 </form>
 
             </div>

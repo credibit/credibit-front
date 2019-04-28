@@ -3,14 +3,13 @@ import { Button, FormGroup, FormControl} from "react-bootstrap";
 import "./Login.css";
 import logo from '../Images/konfio.png';
 
-export default class Login extends Component {
+class Login extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
       username: "",
-      password: "",
-      data: null,
+      password: ""
     };
     this.onLogIn = this.onLogIn.bind(this);
   }
@@ -19,9 +18,15 @@ export default class Login extends Component {
     return this.state.username.length > 0 && this.state.password.length > 0;
   }
 
-  handleChange = event => {
+  handleUsernameChange = event => {
     this.setState({
-      [event.target.id]: event.target.value
+      'username': event.target.value
+    });
+  }
+
+  handlePasswordChange = event => {
+    this.setState({
+      'password': event.target.value
     });
   }
 
@@ -30,41 +35,30 @@ export default class Login extends Component {
   }
 
   onLogIn() {
-    fetch(`${process.env.REACT_APP_API_URL}/login`, {
-        method: 'post',
-        headers: {'Content-Type':'application/json'},
-        body: {
-        "username": this.state.username,
-        "password": this.state.password
-        }
-      })
-        .then(response => response.json())
-        .then(data => {this.setState({ data }); console.log(data)});
-
+    this.props.history.push('/admin');
   }
 
     render() {
     return (
-    <body>
     <div className="Login">
       <div className="pop">    
         <form onSubmit={this.handleSubmit}>  
         <img src={logo} alt="" className="login-logo"/>      
-          <FormGroup controlId="email" className="email_label" bsSize="large">
-          <i class="fas fa-envelope"></i>
+          <FormGroup controlId="email" className="email_label">
+          <i className="fas fa-envelope"></i>
             <FormControl
               autoFocus
               type="email"
               value={this.state.username}
-              onChange={this.handleChange} placeholder="Mail" 
+              onChange={this.handleUsernameChange} placeholder="Mail" 
             
             />
           </FormGroup>
-          <FormGroup controlId="password" bsSize="large">
-          <i class="fas fa-key"></i>
+          <FormGroup controlId="password">
+          <i className="fas fa-key"></i>
             <FormControl
               value={this.state.password}
-              onChange={this.handleChange}
+              onChange={this.handlePasswordChange}
               type="password" placeholder = "Password"
             />
           </FormGroup>
@@ -72,7 +66,6 @@ export default class Login extends Component {
           <br/>
           <Button
             block
-            bsSize="large"
             disabled={!this.validateForm()}
             type="submit"
             className="btn-primary-mine"
@@ -83,7 +76,8 @@ export default class Login extends Component {
         </form>
         </div>
     </div>
-    </body>
     );
   }
 }
+
+export default Login;
