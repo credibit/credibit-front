@@ -16,6 +16,11 @@ class EnterpriseForm extends React.Component{
                         </input>
                     </div>
                     <div>
+                        <i class="fas fa-link"></i>
+                        <input type="url" placeholder="Url de la empresa">
+                        </input>
+                    </div>
+                    <div>
                         <i class="fas fa-envelope"></i>
                         <input type="email" placeholder="Correo">
                         </input>
