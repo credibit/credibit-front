@@ -13,17 +13,17 @@ class EnterpriseForm extends React.Component{
                     </div>
                     <div>
                         <i class="fas fa-envelope"></i>
-                        <input type="text" placeholder="Correo">
+                        <input type="email" placeholder="Correo">
                         </input>
                     </div>
                     <div>
                         <i class="fas fa-dot-circle"></i>
-                        <input type="text" placeholder="Puntos Buró">
+                        <input type="number" step="1" min="0" max="100" placeholder="Puntos Buró">
                         </input>
                     </div>
                     <div>
                         <i class="fas fa-building"></i>
-                        <input type="text" placeholder="Puntos SAT">
+                        <input type="number" step="1" min="0" max="100" placeholder="Puntos SAT">
                         </input>
                     </div>
                 </form>
