@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import Form from '../Form/Form.js';
 import Login from  '../Login/Login.js';
 import Result from '../Result/Result.js';
+import AdminPage from '../AdminPage/AdminPage.js';
 
 class Header extends React.Component {
     render(){
@@ -40,6 +41,7 @@ class Header extends React.Component {
                 <Route path="/form" component={Form} />
                 <Route path="/login" component={Login} />
                 <Route path="/result" component={Result}/>
+                <Route path="/admin" component={AdminPage}/>
 
             </Router>
         );
