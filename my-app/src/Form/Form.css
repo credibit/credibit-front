@@ -56,3 +56,11 @@
 .forms-align {
     text-align: center;
 }
+
+.nav-form li{
+    cursor: pointer;
+}
+
+i {
+    padding-bottom: .5rem !important;
+}

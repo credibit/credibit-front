@@ -51,7 +51,7 @@ class CreditForm extends React.Component{
                         <input type="number" min="3" max="400" step="1" placeholder="Plazo deseado" onChange={(e) => this.props.setInputValue(e, 'plazoDeseado')}></input>
                     </div>
                 </form>
-                <button onClick={() => this.submitAll()}>Submit</button>
+                <button className="btn-primary-mine" onClick={() => this.submitAll()}>Submit</button>
             </div>
         )
     }
