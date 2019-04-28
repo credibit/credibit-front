@@ -26,25 +26,25 @@ export default class Login extends Component {
     event.preventDefault();
   }
 
-  render() {
+    render() {
     return (
-      <div className="Login">
-        <form onSubmit={this.handleSubmit}>
+    <body>
+    <div className="Login">
+      <div className="pop">       
+        <form onSubmit={this.handleSubmit}>        
           <FormGroup controlId="email" bsSize="large">
-            <FormLabel>Email</FormLabel>
             <FormControl
               autoFocus
               type="email"
               value={this.state.email}
-              onChange={this.handleChange}
+              onChange={this.handleChange} placeholder="&#xF002;"
             />
           </FormGroup>
           <FormGroup controlId="password" bsSize="large">
-            <FormLabel>Password</FormLabel>
             <FormControl
               value={this.state.password}
               onChange={this.handleChange}
-              type="password"
+              type="password" placeholder = "Password"
             />
           </FormGroup>
           <Button
@@ -56,7 +56,9 @@ export default class Login extends Component {
             Login
           </Button>
         </form>
-      </div>
+        </div>
+    </div>
+    </body>
     );
   }
 }
