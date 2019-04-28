@@ -1,4 +1,5 @@
 import React from 'react';
+import {withRouter} from 'react-router-dom';
 
 class CreditForm extends React.Component{
     constructor(props) {
@@ -34,8 +35,11 @@ class CreditForm extends React.Component{
                 },
                 body: JSON.stringify(sendData)})
                 .then(response => response.json())
-                .then(data => console.log(data));
+                .then(data => this.setState(data));
         }
+        console.log(this.state.data);
+        this.props.history.push({pathname: '/result',
+        state: { data: this.state.data }})
     }
     render() {
         return(
@@ -58,4 +62,4 @@ class CreditForm extends React.Component{
 
 }
 
-export default CreditForm;
+export default withRouter(CreditForm);

@@ -2,9 +2,11 @@ import React from 'react';
 import InformationCard from '../InformationCard/InformationCard.js';
 import AcceptanceCard from '../AcceptanceCard/AcceptanceCard.js';
 import './Result.css';
+import PropTypes from 'prop-types';
 
 class Result extends React.Component {
     render() {
+        console.log(this.props.location.state);
         return (
             <div className="container-result">
                 <AcceptanceCard/>
@@ -29,6 +31,8 @@ class Result extends React.Component {
                     title="Hi"
                     description="Hello there"
                     />
+                </div>
+                <div>
                 </div>
             </div>
         )

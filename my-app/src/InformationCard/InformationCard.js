@@ -6,7 +6,7 @@ class InformationCard extends React.Component {
     render() {
         return (
             <div className="card-container">
-                <i class={this.props.icon}></i>
+                <i className={this.props.icon}></i>
                 <div className="title">{this.props.title}</div>
                 <div className="description">{this.props.description}</div>
             </div>
