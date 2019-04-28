@@ -16,6 +16,7 @@ class CreditForm extends React.Component{
                         </input>
                     </div>
                 </form>
+                <button type="submit">Submit</button>
             </div>
         )
     }

@@ -29,7 +29,17 @@ class EnterpriseForm extends React.Component{
                         <i class="fas fa-dot-circle"></i>
                         <input type="number" step="1" min="0" max="100" placeholder="Puntos Buró">
                         </input>
-                    </div>            
+                    </div>         
+                    <div>
+                        <i class="fas fa-dot-circle"></i>
+                        <input type="number" step="1" min="0" max="100000000" placeholder="Ingreso Mensual">
+                        </input>
+                    </div>
+                    <div>
+                        <i class="fas fa-bacon"></i>
+                        <input type="number" step="1" min="0" max="10000000000" placeholder="Ingreso Neto">
+                        </input>
+                    </div>             
                     
                     <div>
                         <i class="fas fa-building none-border"></i>
