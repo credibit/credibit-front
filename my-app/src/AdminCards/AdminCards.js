@@ -7,7 +7,8 @@ class AdminCards extends React.Component {
     constructor(){
         super();
         this.state = {
-            data: {}
+            data: {},
+            data1: {}
         }
     }
     render(){
@@ -23,12 +24,31 @@ class AdminCards extends React.Component {
                 }
             ]
         }
+
+        this.state.data1 = {
+            labels: ["Puntos del Buró"],
+            datasets: [
+                {
+                    label: "Puntos del Buró",
+                    data: [this.props.puntosBuro, 100- this.props.puntosBuro],
+                    backgroundColor: [
+                        "rgba(138, 121, 247, 0.2)"
+                    ],
+                }
+            ]
+        }
         return(
         <div className="admin-card-container">
         <div className="style-information">
                 <div className="title"><a href={this.props.domain}>{this.props.name}</a></div>
+                <div className="pie-first">
                 <Pie
                     data={this.state.data}
+                    height={50}
+                />
+                </div>
+                <Pie
+                    data={this.state.data1}
                     height={50}
                 />
             <div className="employees">
@@ -54,6 +74,7 @@ class AdminCards extends React.Component {
             <a href = {this.props.linkedin}>
                 <i class="fab fa-linkedin"></i>
             </a>
+            <div className = "plazo" >Plazo: {this.props.plazoDeseado} Meses</div>
         </div>
 
         </div>
