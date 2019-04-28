@@ -16,8 +16,19 @@ class EnterpriseForm extends React.Component{
                         <input type="text" placeholder="Correo">
                         </input>
                     </div>
+                    <div>
+                        <i class="fas fa-dot-circle"></i>
+                        <input type="text" placeholder="Puntos Buró">
+                        </input>
+                    </div>
+                    <div>
+                        <i class="fas fa-building"></i>
+                        <input type="text" placeholder="Puntos SAT">
+                        </input>
+                    </div>
                 </form>
             </div>
+            
         )
     }
 

@@ -8,8 +8,8 @@ class Form extends React.Component {
     constructor() {
         super();
         this.state = { 
-            personal: true,
-            enterprise: false,
+            personal: false,
+            enterprise: true,
             credit: false,
             active: ''
         }
@@ -48,9 +48,9 @@ class Form extends React.Component {
                         Solicitar Credito
                         <div>
                             <ul className="nav-form">
-                                <li onClick = {this.handlePersonalClick} className={`${this.state.personal ? 'active' : 'non-active'}`}>
+                                {/* <li onClick = {this.handlePersonalClick} className={`${this.state.personal ? 'active' : 'non-active'}`}>
                                     Personal
-                                </li>
+                                </li> */}
                                 <li onClick = {this.handleEnterpriseClick} className={`${this.state.enterprise ? 'active' : 'non-active'}`}>
                                     Empresa
                                 </li>
