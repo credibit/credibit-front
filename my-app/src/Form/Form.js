@@ -46,7 +46,7 @@ class Form extends React.Component {
                 <div className="popup-form">
                     <div className="title">
                         Solicitar Credito
-                        <div>
+                        <div className="forms-align">
                             <ul className="nav-form">
                                 {/* <li onClick = {this.handlePersonalClick} className={`${this.state.personal ? 'active' : 'non-active'}`}>
                                     Personal
