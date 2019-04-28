@@ -31,7 +31,7 @@ li {
     display: flex;
 }
 
-.btn-primary {
+.btn-primary-mine {
     background-color: #8a79f7;
     padding: 14px 32px;
     border-radius: 25px;
@@ -40,6 +40,6 @@ li {
     border: none;
 }
 
-.btn-secondary {
+.btn-secondary-mine {
     color: white;
 }
