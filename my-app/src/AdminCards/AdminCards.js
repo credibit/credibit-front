@@ -60,6 +60,11 @@ class AdminCards extends React.Component {
                 <div className="num-employees"> {
                     this.props.approved === 1 ? "Your Credit was Approved" : "Your Credit wasn't Approved"
                 } </div>
+                <br/>
+                <br/>
+                <div>Credito Dado : {this.props.toPay}</div>
+                <div>ingreso Neto : {this.props.ingresoNeto}</div>
+                <div>ingreso Mensual : {this.props.ingresoMensual}</div>
             </div>
         </div>
         <div className="social-media">
