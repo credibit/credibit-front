@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Button, FormGroup, FormControl, FormLabel} from "react-bootstrap";
+import { Button, FormGroup, FormControl} from "react-bootstrap";
 import "./Login.css";
 
 export default class Login extends Component {
@@ -32,12 +32,13 @@ export default class Login extends Component {
     <div className="Login">
       <div className="pop">       
         <form onSubmit={this.handleSubmit}>        
-          <FormGroup controlId="email" bsSize="large">
+          <FormGroup controlId="email" className="email_label" bsSize="large">
             <FormControl
               autoFocus
               type="email"
               value={this.state.email}
-              onChange={this.handleChange} placeholder="&#xF002;"
+              onChange={this.handleChange} placeholder="Mail" 
+            
             />
           </FormGroup>
           <FormGroup controlId="password" bsSize="large">
