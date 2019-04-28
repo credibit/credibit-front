@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Button, FormGroup, FormControl} from "react-bootstrap";
 import "./Login.css";
+import logo from '../Images/konfio.png';
 
 export default class Login extends Component {
   constructor(props) {
@@ -30,9 +31,11 @@ export default class Login extends Component {
     return (
     <body>
     <div className="Login">
-      <div className="pop">       
-        <form onSubmit={this.handleSubmit}>        
+      <div className="pop">    
+        <form onSubmit={this.handleSubmit}>  
+        <img src={logo} alt="" className="login-logo"/>      
           <FormGroup controlId="email" className="email_label" bsSize="large">
+          <i class="fas fa-envelope"></i>
             <FormControl
               autoFocus
               type="email"
@@ -42,12 +45,15 @@ export default class Login extends Component {
             />
           </FormGroup>
           <FormGroup controlId="password" bsSize="large">
+          <i class="fas fa-key"></i>
             <FormControl
               value={this.state.password}
               onChange={this.handleChange}
               type="password" placeholder = "Password"
             />
           </FormGroup>
+          <br/>
+          <br/>
           <Button
             block
             bsSize="large"

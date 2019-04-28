@@ -8,17 +8,38 @@
     .Login form {
     margin: 0 auto;
     max-width: 320px;
+    text-align: center;
     }
 }
 
+.Login input::placeholder {
+    color: white;
+}
+.Login input {
+    color: white;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid white;
+    width: 80%;
+}
+
 .pop{
-    padding-top: 250px;
+    padding: 3rem 0rem;
     margin: 0 25%;
     width: 50%;
     height: 350px;
     border-radius: 10px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 10px 10px 2px rgba(0, 0, 0, 0.24);
-    background-color: #8177c7;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background: linear-gradient(rgba(245, 246, 252, 0),#8972da);
 }
 
+.Login i {
+    border: none;
+    border-bottom: 2px solid white;
+    padding-bottom: .55rem;
+    color: white;
+}
 
+.login-logo {
+    width: 50%;
+}
