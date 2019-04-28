@@ -1,5 +1,5 @@
 .contain-form {
-    background: linear-gradient(rgba(245, 246, 252, 0.52),#8972da);
+    background: linear-gradient(rgba(150, 165, 247, 0),#8972da);
     background-repeat:no-repeat;
     height: -webkit-fill-available;
 }
@@ -15,11 +15,12 @@
     background-color: white;
     padding: 2rem;
     left: 50%;
-    top: 40%;
-    transform: translateY(-40%);
+    margin: 4rem 0rem;
     transform: translateX(-50%);
     width: 70%;
     color: white;
+    border-radius: 1rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .title {
