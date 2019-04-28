@@ -1,9 +1,15 @@
 import React from 'react';
 import '../EnterpriseForm/EnterpriseForm.css';
 class EnterpriseForm extends React.Component{
-    eval () {
+    constructor(props) {
+        super(props);
+        this.state = {};
+    }
+
+    eval (e) {
         var sliderValue = document.getElementById('rating').value;
-            document.getElementById('sliderVal').innerHTML = sliderValue;
+        document.getElementById('sliderVal').innerHTML = sliderValue;
+        this.props.setInputValue(e, 'puntosSat')
     }
     render() {
         
@@ -11,45 +17,44 @@ class EnterpriseForm extends React.Component{
             <div>
                 <form className = "enterprise-form">
                     <div>
-                        <i class="fas fa-globe-americas"></i>
-                        <input type="text" placeholder="Enterprise Name">
+                        <i className="fas fa-globe-americas"></i>
+                        <input type="text" placeholder="Enterprise Name" onChange={(e) => this.props.setInputValue(e, 'nombreEmpresa')}>
                         </input>
                     </div>
                     <div>
-                        <i class="fas fa-link"></i>
-                        <input type="url" placeholder="Url de la empresa">
+                        <i className="fas fa-link"></i>
+                        <input type="url" placeholder="Url de la empresa" onChange={(e) => this.props.setInputValue(e, 'companySite')}>
                         </input>
                     </div>
                     <div>
-                        <i class="fas fa-envelope"></i>
-                        <input type="email" placeholder="Correo">
+                        <i className="fas fa-envelope"></i>
+                        <input type="email" placeholder="Correo" onChange={(e) => this.props.setInputValue(e, 'correo')}>
                         </input>
                     </div>
                     <div>
-                        <i class="fas fa-dot-circle"></i>
-                        <input type="number" step="1" min="0" max="100" placeholder="Puntos Buró">
+                        <i className="fas fa-dot-circle"></i>
+                        <input type="number" step="1" min="0" max="100" placeholder="Puntos Buró" onChange={(e) => this.props.setInputValue(e, 'puntosBuro')}>
                         </input>
                     </div>         
                     <div>
-                        <i class="fas fa-dot-circle"></i>
-                        <input type="number" step="1" min="0" max="100000000" placeholder="Ingreso Mensual">
+                        <i className="fas fa-dot-circle"></i>
+                        <input type="number" step="1" min="0" max="100000000" placeholder="Ingreso Mensual" onChange={(e) => this.props.setInputValue(e, 'ingresoMensual')}>
                         </input>
                     </div>
                     <div>
-                        <i class="fas fa-bacon"></i>
-                        <input type="number" step="1" min="0" max="10000000000" placeholder="Ingreso Neto">
+                        <i className="fas fa-bacon"></i>
+                        <input type="number" step="1" min="0" max="10000000000" placeholder="Ingreso Neto" onChange={(e) => this.props.setInputValue(e, 'ingresoNeto')}>
                         </input>
                     </div>             
                     
                     <div>
-                        <i class="fas fa-building none-border"></i>
-                        <input type="range" class="custom-range" id="rating" onChange={this.eval} step="1" min="0" max="100" />
+                        <i className="fas fa-building none-border"></i>
+                        <input type="range" className="custom-range" id="rating" onChange={(e) => this.eval(e)} step="1" min="0" max="100"/>
                         <div className="border-separator"/>
                         <output id="sliderVal"></output>
                         
                         </div>
                 </form>
-                <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossOrigin="anonymous"/>
 
             </div>
             

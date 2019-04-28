@@ -11,7 +11,18 @@ class Form extends React.Component {
             personal: false,
             enterprise: true,
             credit: false,
-            active: ''
+            active: '',
+            newCredit: {
+                nombreEmpresa: '',
+                correo: '',
+                puntosBuro: '',
+                puntosSat: '',
+                ingresoMensual: '',
+                ingresoNeto: '',
+                cantidadDeseada: '',
+                plazoDeseado: '',
+                companySite: ''
+            }
         }
     }
 
@@ -37,6 +48,16 @@ class Form extends React.Component {
             enterprise: false,
             credit: true
         })
+    }
+
+    setInputValue = (e, name) => {
+        const newVal = e.target.value;
+        this.setState({
+            newCredit: {
+                ...this.state.newCredit,
+                [name]: newVal
+            }
+        });
     }
 
     render() {
@@ -65,9 +86,9 @@ class Form extends React.Component {
                             {active === 'personal' ? (
                                 <PersonalForm />
                             ) : active === 'enterprise' ? (
-                                <EnterpriseForm />
+                                <EnterpriseForm setInputValue={(e, name) => this.setInputValue(e, name)}/>
                             ) : active === 'credit' ? (
-                                <CreditForm />
+                                <CreditForm newCredit={this.state.newCredit} setInputValue={(e, name) => this.setInputValue(e, name)}/>
                             ) : null}
                             
                         </div>
