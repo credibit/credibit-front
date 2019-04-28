@@ -1,5 +1,8 @@
 import React from 'react';
 import '../Form/Form.css';
+import PersonalForm from '../PersonalForm/PersonalForm';
+import EnterpriseForm from '../EnterpriseForm/EnterpriseForm';
+import CreditForm from '../CreditForm/CreditForm';
 
 class Form extends React.Component {
     constructor() {
@@ -8,6 +11,7 @@ class Form extends React.Component {
             personal: true,
             enterprise: false,
             credit: false,
+            active: ''
         }
     }
 
@@ -36,6 +40,7 @@ class Form extends React.Component {
     }
 
     render() {
+        var active = this.state.personal === true ? 'personal' : this.state.enterprise === true ? 'enterprise' : 'credit';
         return(
             <div className="contain-form">
                 <div className="popup-form">
@@ -43,18 +48,29 @@ class Form extends React.Component {
                         Solicitar Credito
                         <div>
                             <ul className="nav-form">
-                                <li className={`${this.state.personal ? 'active' : 'non-active'}`}>
-                                
+                                <li onClick = {this.handlePersonalClick} className={`${this.state.personal ? 'active' : 'non-active'}`}>
                                     Personal
                                 </li>
-                                <li className={`${this.state.enterprise ? 'active' : 'non-active'}`}>
+                                <li onClick = {this.handleEnterpriseClick} className={`${this.state.enterprise ? 'active' : 'non-active'}`}>
                                     Empresa
                                 </li>
-                                <li className={`${this.state.credit ? 'active' : 'non-active'}`}>
+                                <li onClick = {this.handleCreditClick} className={`${this.state.credit ? 'active' : 'non-active'}`}>
                                     Credito
+                                    
                                 </li>
                             </ul>
                         <div/>
+
+                        <div>
+                            {active === 'personal' ? (
+                                <PersonalForm />
+                            ) : active === 'enterprise' ? (
+                                <EnterpriseForm />
+                            ) : active === 'credit' ? (
+                                <CreditForm />
+                            ) : null}
+                            
+                        </div>
                     </div>
                 </div>
             </div>

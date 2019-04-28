@@ -4,8 +4,7 @@
   "private": true,
   "dependencies": {
     "bootstrap": "^3.4.1",
-    "mdb": "^0.1.0",
-    "mdbreact": "^4.13.0",
+    "font-awesome": "^4.7.0",
     "react": "^16.8.6",
     "react-bootstrap": "^1.0.0-beta.8",
     "react-dom": "^16.8.6",
